@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tour A-Frame</title>
+    <script src="../../aframe/dist/aframe-v1.0.4.min.js"></script>
+</head>
+
+<body>
+<a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+
+<a-entity cursor="rayOrigin: mouse" raycaster="direction: -0.3035078853305619 0.595726236522669 -0.7436351354398926; useWorldCoordinates: true"></a-entity>
+
+<script>
+  AFRAME.registerComponent("weblink", {
+    schema: {
+      url: {
+        default: ""
+      }
+    },
+    init: function() {
+      this.el.addEventListener("click", (e) => {
+        window.location = this.data.url;
+      })
+    }
+  })
+</script><div class="a-loader-title" style="display: none;">Dead Ends</div>
+
+
+
+
+<a-box position="0 0 -15" rotation="" width="5" height="1.5" color="orange" weblink="url: Embankment2.html" material="" geometry="">
+  <a-text font="kelsonsans" value="Embankment 2" width="15" position="-1 0 3" rotation="" text=""></a-text>
+</a-box>
+
+<a-box position="-5 0 -15" rotation="" width="5" height="1.5" color="orange" weblink="url: Embankment3.html" material="" geometry="">
+  <a-text font="kelsonsans" value="Embankment 3" width="15" position="-1 0 3" rotation="" text=""></a-text>
+</a-box>
+
+<a-box position="-10 0 -15" rotation="" width="5" height="1.5" color="orange" weblink="url: Embankment4.html" material="" geometry="">
+  <a-text font="kelsonsans" value="Embankment 4" width="15" position="-1 0 3" rotation="" text=""></a-text>
+</a-box>
+
+<a-box position="-15 0 -15" rotation="" width="5" height="1.5" color="orange" weblink="url: Embankment5.html" material="" geometry="">
+  <a-text font="kelsonsans" value="Embankment 5" width="15" position="-1 0 3" rotation="" text=""></a-text>
+</a-box>
+
+
+<!-- Change 360 photo to your own below. -->
+<a-sky src="EmbankmentDeadEnd.jpg" rotation="0 -130 0" material="" geometry=""></a-sky>
+<!-- ....................... -->
+
+</a-scene>
+
+
+</body>
+</html>
+
+
+
+
